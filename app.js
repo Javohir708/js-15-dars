@@ -61,7 +61,7 @@ function signUp(newUser) {
         DATA.push(newUser);
         return `Welcome ${newUser.name}, you have successfully signed up`;
     } catch (error) {
-        return error.message;
+        return (error);
     }
 }
 
