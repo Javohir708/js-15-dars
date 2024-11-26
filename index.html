@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        button {
-            margin: 15px;
-            padding: 12px 18px;
-            border: none;
-            background-color: #000;
-            color: #fff;
-            border-radius: 10px;
-        }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      button {
+        margin: 15px;
+        padding: 12px 18px;
+        border: none;
+        background-color: #000;
+        color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      button:hover {
+        transform: scale(1.1);
+      }
+
+      button:active {
+        transform: scale(0.9);
+      }
     </style>
-</head>
-<body>
-    
+  </head>
+  <body>
+
     <button onclick="handleSignIn()">Sign In</button>
     <button onclick="handleSignUp()">Sign up</button>
 
-
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>
