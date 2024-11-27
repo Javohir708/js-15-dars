@@ -53,6 +53,11 @@ function signUp(newUser) {
             throw new Error("password must be at least 6 characters long");
         }
 
+        let existUser = DATA.find(u => u.username === newUser.username);
+        if (existUser) {
+            throw new Error("this person has already registered");
+        }
+
         DATA.push(newUser);
         return `Welcome ${newUser.name}, you have successfully signed up`;
     } catch (error) {
