@@ -43,19 +43,14 @@ function handleSignIn () {
 
 function signUp(newUser) {
     try {
-        if (!newUser.name || newUser.name.length < 1) {
+        if (newUser.name.length < 1) {
             throw new Error("Name must be at least 1 letter");
         }
-        if (!newUser.username || newUser.username.length < 4) {
+        if (newUser.username.length < 4) {
             throw new Error("Username must be at least 4 characters");
         }
-        if (!newUser.password || newUser.password.length < 6) {
+        if (newUser.password.length < 6) {
             throw new Error("password must be at least 6 characters long");
-        }
-
-        let existUser = DATA.find(u => u.username === newUser.username);
-        if (existUser) {
-            throw new Error("This username is already taken.");
         }
 
         DATA.push(newUser);
